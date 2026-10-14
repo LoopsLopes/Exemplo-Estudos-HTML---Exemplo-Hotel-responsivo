@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1a20;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 30px 40px 20px 40px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+.top-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-sonar {
+    border: 1px solid #ffffff;
+    padding: 8px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-sonar:hover{
+    background-color: #ffffff;
+    color: #0b1a20;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 15px;
+}
+
+.categorias a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.categorias a:hover, 
+.categorias a.active {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+
+
+
+.hero-banner {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(11, 26, 32, 0.4), rgba(11, 26, 32, 0.5)), url('imagens/Quartos-Hotel-banner.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    margin-top: 100px;
+    scale: 1;
+    transition: scale 0.3s;
+}
+
+.hero-content:hover{
+    scale: 1.2;
+    transition: scale 0.3s;
+}
+
+.titulo {
+    font-size: 85px;
+    font-weight: 300;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+#reserva {
+    background-color: #0b1a20; 
+}
+
+#fotos {
+    background-color: #061114; 
+}
+
+.bloco-hotel {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 60px 10%;
+    gap: 5%;
+}
+
+.conteudo-coluna {
+    flex: 1;
+    max-width: 500px;
+}
+
+.conteudo-coluna h2 {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.conteudo-coluna p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #ffffff;
+    color: #0b1a20;
+}
+
+.imagem-coluna {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-coluna img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    
+    header {
+        padding: 20px 20px 15px 20px; 
+        position: relative; 
+        background: rgba(11, 26, 32, 0.95);
+    }
+
+    .top-bar {
+        flex-direction: row;
+        justify-content: space-between; 
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .top-center {
+        transform: none;
+        text-align: center;
+    }
+
+    .categorias {
+        gap: 15px;
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .categorias a {
+        font-size: 10px; 
+        letter-spacing: 2px;
+    }
+
+    .hero-banner {
+        height: auto;
+        min-height: 60vh;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        margin-top: 40px;
+    }
+
+    .hero-content:hover {
+        scale: 1.5;
+    }
+
+    .titulo {
+        font-size: 38px;
+        letter-spacing: 5px;
+        line-height: 1.2;
+    }
+
+    .bloco-hotel {
+        flex-direction: column;
+        padding: 40px 5%;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .conteudo-coluna {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .conteudo-coluna h2 {
+        font-size: 24px;
+    }
+
+    .imagem-coluna {
+        max-width: 100%;
+        order: -1;
+    }
+
+    .imagem-coluna img {
+        max-height: 350px;
+    }
+}
